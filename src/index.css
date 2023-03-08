@@ -11,14 +11,22 @@
 /* 进入dark模式和退出dark模式时，两个图像的位置顺序正好相反 */
 .dark::view-transition-old(root) {
   z-index: 1;
+  clip-path: none;
 }
 .dark::view-transition-new(root) {
   z-index: 999;
+  clip-path: var(--view-transition-clip-path);
+  /* 使动画持续1s，系统的过渡时间取决于这个值，如果不设置，则过渡效果会瞬间完成 */
+  transition-duration: 0.5s;
 }
 
 ::view-transition-old(root) {
   z-index: 999;
+  clip-path: var(--view-transition-clip-path);
+  /* 使动画持续1s，系统的过渡时间取决于这个值，如果不设置，则过渡效果会瞬间完成 */
+  transition-duration: 0.5s;
 }
 ::view-transition-new(root) {
   z-index: 1;
+  clip-path: none;
 }

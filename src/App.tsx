@@ -1,3 +1,4 @@
+import gsap from "gsap";
 export default function App() {
   const toggleTheme = (event: MouseEvent) => {
     const x = event.clientX;
@@ -22,16 +23,13 @@ export default function App() {
         `circle(0px at ${x}px ${y}px)`,
         `circle(${endRadius}px at ${x}px ${y}px)`,
       ];
-      document.documentElement.animate(
+      gsap.fromTo(
+        document.documentElement,
         {
-          clipPath: isDark ? [...clipPath].reverse() : clipPath,
+          "--view-transition-clip-path": isDark ? clipPath[1] : clipPath[0],
         },
         {
-          duration: 500,
-          easing: "ease-in",
-          pseudoElement: isDark
-            ? "::view-transition-old(root)"
-            : "::view-transition-new(root)",
+          "--view-transition-clip-path": isDark ? clipPath[0] : clipPath[1],
         }
       );
     });

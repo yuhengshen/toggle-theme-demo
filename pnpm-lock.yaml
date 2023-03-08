@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   autoprefixer: ^10.4.13
+  gsap: ^3.11.4
   postcss: ^8.4.21
   prettier: ^2.8.4
   prettier-plugin-tailwindcss: ^0.2.4
@@ -13,6 +14,7 @@ specifiers:
 
 dependencies:
   autoprefixer: 10.4.13_postcss@8.4.21
+  gsap: 3.11.4
   postcss: 8.4.21
   solid-js: 1.6.10
   tailwindcss: 3.2.7_postcss@8.4.21
@@ -891,6 +893,10 @@ packages:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
     engines: {node: '>=4'}
     dev: true
+
+  /gsap/3.11.4:
+    resolution: {integrity: sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA==}
+    dev: false
 
   /has-flag/3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
